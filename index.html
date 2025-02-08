@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="simple kanban board">
+  <title>kaaaaaaaaaaaaahn!</title>
+  <link rel="stylesheet" href="elmental/styles.css">
+  <script type="module" src="scripts/app.min.js"></script>
+
+  <!-- PWA -->
+  <link rel="manifest" href="./mainfest.json">
+  <meta name="theme-color" content="#121212">
+
+</head>
+<body>
+
+  <header class="wrapper site-header">
+    <h1>Simple Kanban</h1>
+    <p class="site-description">Get some shit done.</p>
+  </header>
+
+  <main class="wrapper">
+    <section class="board" data-row data-columns="3" data-gap="sm">
+      <div class="todo column" data-status="todo" data-stack data-gap="sm">
+        <header>
+          <h2>To Do</h2>
+          <button class="btn-icon add-card-btn" title="Add Card">+</button>
+        </header>
+
+        <!-- <kb-card status="todo" id="1738987006218"> </kb-card> -->
+      </div>
+
+
+      <div class="inprogress column" data-status="inprogress" data-stack data-gap="sm">
+        <header>
+          <h2>In Progress</h2>
+        </header>
+
+        <!-- <kb-card status="inprogress" id="1738987006218"> </kb-card> -->
+      </div>
+
+      <div class="done column" data-status="done" data-stack data-gap="sm">
+        <header>
+          <h2>Done</h2>
+        </header>
+
+        <!-- <kb-card status="done" id="1738987006218"> </kb-card> -->
+      </div>
+    </section>
+  </main>
+
+
+
+  <template id="kb-card">
+
+
+    <article class="card">
+      <header class="card-header">
+        <button class="btn-delete"> &times; </button>
+        <button> <span></span> </button>
+      </header>
+
+      <div contenteditable="true">
+        No mames.
+      </div>
+
+      <footer></footer>
+    </article>
+
+  </template>
+
+
+</body>
+</html>

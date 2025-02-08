@@ -1,0 +1,10 @@
+[data-grid] {
+  --gap: initial;
+  --col-px-width: 300;
+  --col-width: calc(var(--col-px-width) / 16 * 1rem);
+  --maximize-col-width: min(100%, var(--col-width));
+
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(var(--maximize-col-width), 1fr));
+}

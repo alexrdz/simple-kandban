@@ -1,0 +1,12 @@
+[data-center] {
+	--center-padding-start: initial;
+	--center-padding-end: initial;
+	block-size: auto;
+	box-sizing: content-box;
+	display: flex;
+	flex-direction: column;
+	max-inline-size: 100%;
+	margin-inline: auto;
+	padding-inline-start: var(--center-padding-start);
+	padding-inline-end: var(--center-padding-end);
+}

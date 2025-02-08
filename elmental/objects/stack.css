@@ -1,0 +1,17 @@
+[data-stack] {
+  --gap: intial;
+  --stack-align: intial;
+  /* ↓ The flex context */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap);
+  align-items: var(--stack-align);
+}
+
+
+
+[data-stack]:only-child {
+  /* ↓ `height` in horizontal-tb writing mode */
+  block-size: 100%;
+}

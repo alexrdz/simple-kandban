@@ -1,0 +1,114 @@
+body {
+  --color-bg: hsl(210deg 18% 90% / 1);
+  --color-white: hsl(210deg 100% 1000% / 1);
+  --color-dark: hsl(354deg 21% 20% / 1);
+  --color-gray-dark: hsl(0deg 0% 9% / 1);
+  --color-gray-light: hsl(51deg 12% 89% / .75);
+  --color-gray-text: hsl(0deg 0% 19% / 1);
+  --color-accent: hsl(0deg 61.64% 57.06%);
+  --color-link: var(--color-accent);
+  --color-selection: var(--color-accent);
+  --color-selection-text: var(--color-bg);
+
+  --card-bg-color: var(--color-white);
+
+  --box-shadow: 3px 3px 10px rgba(60,93,88,.495);
+
+  --letter-spacing: .26em;
+}
+
+.wrapper {
+  max-inline-size: 95%;
+  margin-inline: auto;
+  position: relative;
+  isolation: isolate;
+  padding-inline: var(--space-s);
+}
+
+.site-header {
+  padding-block-start: var(--space-l);
+}
+
+.board {
+  --collapse-at: 60rem;
+  margin-inline: auto;
+  border-radius: .5rem;
+  border: 1px solid var(--color-gray-light);
+  margin-block-start: var(--space-m);
+}
+
+.toolbar {
+  padding-block: var(--space-s);
+}
+
+#add-card-input {
+  padding: var(--space-2xs);
+}
+
+.column {
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  border-radius: .5rem;
+  border: 1px solid var(--color-gray-light);
+  overflow: hidden;
+  padding: var(--space-s);
+  position: relative;
+
+  &:nth-child(1) {
+    --column-color: var(--color-accent);
+  }
+  &:nth-child(2) {
+    --column-color: var(--color-tertiary);
+  }
+  &:nth-child(3) {
+    --column-color: var(--color-secondary);
+  }
+
+  > header {
+    padding-block-end: var(--space-s);
+    position: relative;
+
+    h2 {
+      border-block-end: .5rem solid;
+      font-size: var(--step-0);
+      font-weight: 300;
+      padding-block-end: calc(var(--space-s) / 2);
+      text-transform: uppercase;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        inline-size: 1rem;
+        block-size: 1rem;
+        background-color: var(--column-color, var(--color-accent));
+        border-radius: 50%;
+        margin-inline-end: .5rem;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+
+kb-card {
+  transition: all .3s ease-in-out;
+}
+[is-dragging="true"] {
+  --card-bg-color: var(--color-gray-dark);
+  scale: 1.05;
+  box-shadow: var(--box-shadow);
+  color: var(--color-white);
+  transform: rotate(-1.5deg);
+}
+/* .is-dragging {
+  scale: 1.05;
+  box-shadow: var(--box-shadow);
+  background-color: var(--color-gray-dark);
+  color: var(--color-white);
+  transform: rotate(-3deg);
+} */

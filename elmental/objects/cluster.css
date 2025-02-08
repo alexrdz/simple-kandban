@@ -1,0 +1,17 @@
+[data-cluster] {
+	--cluster-padding: initial;
+	--gap: initial;
+	--justify: initial;
+	--align: initial;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gap, 0rem);
+	justify-content: var(--justify, flex-start);
+	align-items: var(--align, flex-start);
+	padding: var(--cluster-padding)
+}
+
+
+[data-cluster]>input {
+	inline-size: auto;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "noreennaseemrodriguez",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss elmental/index.css -o elmental/styles.css",
+    "watch": "postcss elmental/index.css -o elmental/styles.css --watch",
+    "js": "esbuild scripts/app.js --bundle --outfile=scripts/app.min.js --minify",
+    "js:watch": "esbuild scripts/app.js --bundle --outfile=scripts/app.min.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "cssnano": "^7.0.6",
+    "esbuild": "^0.24.2",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "postcss-minify": "^1.1.0"
+  }
+}

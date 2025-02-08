@@ -1,0 +1,21 @@
+[data-flex] {
+  --align: initial;
+  --gap: initial;
+  --col-px-width: 350;
+  --col-width: calc(var(--col-px-width) / 16 * 1rem);
+  --threshold: calc(var(--col-width) - 100%);
+
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  position: relative;
+  align-items: var(--align);
+
+  > * {
+    flex-basis: calc(var(--threshold) * 666);
+    flex-grow: 1;
+
+    /* the minimum inline-size of children (--col-width) or 100% if the viewport is smaller than --col-width */
+    min-inline-size: min(100%, var(--col-width));
+  }
+}

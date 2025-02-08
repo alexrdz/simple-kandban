@@ -1,0 +1,24 @@
+[data-row] {
+  --collapse-at: 40rem;
+  --threshold: calc(var(--collapse-at) - 100%);
+  --columns: 4;
+  --col-size: calc((100 / var(--columns)) * 1%);
+  --gap-initial: 1rem;
+  --gap: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 0);
+}
+[data-row] > * {
+  min-inline-size: calc(var(--col-size) - (var(--gap) * 2));
+  max-inline-size: 100%;
+  flex-grow: 1;
+  flex-basis: calc(var(--threshold) * 666);
+}
+
+[data-collapse="sm"] { --collapse-at: 22.5rem; }
+[data-collapse="md"] { --collapse-at: 53.75rem; }
+
+[data-columns="2"] { --columns: 2; }
+[data-columns="3"] { --columns: 3; }
+[data-columns="4"] { --columns: 4; }

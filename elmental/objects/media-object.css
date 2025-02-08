@@ -1,0 +1,40 @@
+[data-media] {
+  --media-padding: initial;
+  --gap: initial;
+  --justify: initial;
+  --align: initial;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--gap, 0rem);
+  justify-content: var(--justify, flex-start);
+  align-items: var(--align, flex-start);
+
+  > *:last-child {
+    flex: 1
+  }
+}
+
+[reverse] {
+  flex-direction: row-reverse;
+  text-align: end;
+}
+
+
+/*
+  The following allows for a staggered list of comments:
+  comment 1
+    comment 1a
+    comment 1b
+  comment 2
+*/
+[data-media~="spacing:sm"] [data-media] {
+  margin-block-start: 1rem
+}
+
+[data-media~="spacing:md"] [data-media] {
+  margin-block-start: 2rem
+}
+
+[data-media~="spacing:lg"] [data-media] {
+  margin-block-start: 3rem
+}

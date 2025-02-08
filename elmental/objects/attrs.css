@@ -1,0 +1,25 @@
+[data-justify="center"] { --justify: center; }
+[data-justify="end"] { --justify: flex-end; }
+[data-justify="start"] { --justify: flex-start; }
+[data-justify="around"] { --justify: space-around; }
+[data-justify="between"] { --justify: space-between; }
+[data-justify="evenly"] { --justify: space-evenly; }
+[data-align="center"] { --align: center; }
+[data-align="end"] { --align: flex-end; }
+[data-align="start"] { --align: flex-start; }
+[data-align="stretch"] { --align: flex-stretch; }
+[data-align="baseline"] { --align: baseline; }
+
+[data-gap="sm"] { --gap: 1rem; }
+[data-gap="md"] { --gap: 2rem; }
+[data-gap="lg"] { --gap: 3rem; }
+
+[data-padding="sm"] { --cluster-padding: var(--layout-cluster-padding-sm); }
+[data-padding="md"] { --cluster-padding: var(--layout-cluster-padding-md); }
+[data-padding="lg"] { --cluster-padding: var(--layout-cluster-padding-lg); }
+
+[data-center~="children"] { align-items: center; }
+[data-center~="text"] { text-align: center; }
+[data-center~="vertically"] { place-content: center; }
+
+[data-equal] > * { flex: 1; }

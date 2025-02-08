@@ -1,0 +1,15 @@
+.btn {
+
+}
+
+.btn-icon {
+  background-color: var(--color-gray-dark);
+  color: var(--color-white);
+  cursor: pointer;
+  padding: var(--space-2xs);
+  inline-size: 2rem;
+  block-size: 2rem;
+  border-radius: .25rem;
+  display: inline-grid;
+  place-content: center;
+}
